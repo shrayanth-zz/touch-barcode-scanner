@@ -1,9 +1,9 @@
 {
     "name": "superstruct-touch-barcode-scanner",
     "type": "code",
-    "creator": "anonymous",
-    "summary": "Short summary",
-    "detailedDescription": "Long description of package",
+    "creator": "Superstruct Ltd",
+    "summary": "Provides access to the PhoneGap Barcode Scanner plugin API",
+    "detailedDescription": "Provides access to the PhoneGap Barcode Scanner plugin API",
     "version": "1.0.0",
     "compatVersion": "1.0.0",
     "format": "1",
