@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 0.10
+env:
+  - SENCHA_CMD_VERSION="4.0.0.203"
+  - SENCHA_TOUCH_VERSION="2.3.0"
+before_script:
+  - .travis/framebuffer-start.sh
+  - .travis/jsduck-install.sh
+  - .travis/sencha-cmd-install.sh
+  - .travis/sencha-touch-install.sh
+  - sencha repo add -address http://packages.deftjs.org/ -name deftjs
+  - .travis/setenv.sh
+  - .travis/sencha-cmd-unpack-private-key.sh
+  - .travis/sencha-package-build.sh
+  # Ensure we are in the root of the repository ready for running tests
+  - "cd $TRAVIS_BUILD_DIR"

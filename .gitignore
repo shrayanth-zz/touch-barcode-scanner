@@ -1,3 +1,9 @@
+packages/superstruct-touch-barcode-scanner/src/js
+packages/superstruct-touch-barcode-scanner/test/js
+packages/deft
+
+build
+
 sdks/touch
 
 .idea/workspace.xml

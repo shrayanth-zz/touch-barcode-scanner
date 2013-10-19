@@ -1,8 +1,15 @@
 Sencha Touch / PhoneGap Barcode Scanner
 =======================================
 
+[![Build Status](https://travis-ci.org/superstruct/touch-barcode-scanner.png?branch=master)](https://travis-ci.org/superstruct/touch-barcode-scanner)
+[![Stories in Ready](https://badge.waffle.io/superstruct/touch-barcode-scanner.png?label=Ready)](http://waffle.io/superstruct/touch-barcode-scanner)
+
 Sencha Touch package that wraps the [PhoneGap Barcode Scanner plugin](https://build.phonegap.com/plugins/140)
 ( `com.phonegap.plugins.barcodescanner` ).
+
+## Team
+
+* [Isaac Johnston](https://github.com/superstructor)
 
 ## License
 

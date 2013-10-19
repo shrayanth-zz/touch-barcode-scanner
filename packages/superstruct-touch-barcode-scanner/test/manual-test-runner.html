@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Manual Test Runner</title>
+
+        <script src="../../../sdks/touch/sencha-touch-all-debug.js"></script>
+
+        <link rel="stylesheet" href="vendor/mocha-1.13.0/mocha.css" />
+
+        <script src="vendor/mocha-1.13.0/mocha.js"></script>
+        <script src="vendor/mocha-as-promised-1.4.0/mocha-as-promised.js"></script>
+        <script src="vendor/chai-1.8.0/chai.js"></script>
+        <script src="vendor/chai-as-promised-4.0.0/chai-as-promised.js"></script>
+        <script src="vendor/sinon-1.7.3/sinon.js"></script>
+        <script src="vendor/sinon-1.7.3/sinon-ie.js"></script>
+        <script src="vendor/sinon-chai-2.4.0/sinon-chai.js"></script>
+        <script src="vendor/sinon-sencha-1.0.0/sinon-sencha.js"></script>
+
+        <script src="chai-setup.js"></script>
+
+        <script src="../../deft/build/deft-debug.js"></script>
+        <script src="../build/superstruct-touch-barcode-scanner-debug.js"></script>
+
+        <script>
+            Ext.Loader.setConfig({
+                enabled: true
+            });
+
+            mocha.setup({
+	           ui: 'bdd',
+	           ignoreLeaks: false,
+               globals: [
+                'plugins'
+               ]
+            });
+
+            Ext.onReady(function(){
+               mocha.run();
+            });
+        </script>
+
+        <script src="js/device/BarcodeScanner.js"></script>
+        <script src="js/device/barcodescanner/Cordova.js"></script>
+        <script src="js/device/barcodescanner/Simulator.js"></script>
+
+
+    </head>
+    <body>
+        <div id="mocha"></div>
+    </body>
+</html>

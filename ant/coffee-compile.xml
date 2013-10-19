@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+    <target name="coffee-compile" description="Compiles CoffeeScript">
+
+        <!-- CoffeeScript should be installed and made available via your PATH.  See: http://coffeescript.org/#installation -->
+        <condition property="coffeeExecutable" value="coffee.cmd">
+            <os family="windows"/>
+        </condition>
+        <condition property="coffeeExecutable" value="coffee">
+            <os family="unix"/>
+        </condition>
+
+        <echo message="Compiling CoffeeScript in ${coffeeDirectory} to ${jsDirectory}" />
+        <exec executable="${coffeeExecutable}">
+            <arg line="--compile --bare --map --output ${jsDirectory} ${coffeeDirectory}" />
+        </exec>
+
+    </target>
+
+</project>

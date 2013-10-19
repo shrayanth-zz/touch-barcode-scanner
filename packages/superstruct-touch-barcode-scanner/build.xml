@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="superstruct-touch-barcode-scanner" default=".help">
+    <property name="skip.style" value="1"/>
+
     <!--
     The build-impl.xml file imported here contains the guts of the build process. It is
     a great idea to read that file to understand how the process works, but it is best to
@@ -27,11 +29,27 @@
 
             <target name="-before-init"/>
             <target name="-after-init"/>
-        
+
         The "build" target performs the call to Sencha Cmd to build the application.
 
             <target name="-before-build"/>
             <target name="-after-build"/>
     -->
+
+    <import file="${workspace.dir}/ant/coffee-compile.xml"/>
+
+    <target name="-before-build" description="Sencha Cmd build extension point">
+
+        <antcall target="coffee-compile">
+            <param name="coffeeDirectory" value="${package.dir}/src/coffee"/>
+            <param name="jsDirectory" value="${package.dir}/src/js"/>
+        </antcall>
+
+        <antcall target="coffee-compile">
+            <param name="coffeeDirectory" value="${package.dir}/test/coffee"/>
+            <param name="jsDirectory" value="${package.dir}/test/js"/>
+        </antcall>
+
+    </target>
 
 </project>
