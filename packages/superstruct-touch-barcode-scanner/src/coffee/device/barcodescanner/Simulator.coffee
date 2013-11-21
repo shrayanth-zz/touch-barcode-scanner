@@ -8,11 +8,9 @@ Ext.define( 'Superstruct.touch.device.barcodescanner.Simulator',
   @return {Deft.promise.Promise}
   ###
   scan: ->
-    deferred = Ext.create( 'Deft.promise.Deferred' )
-
-    setTimeout(->
-      deferred.resolve() # TODO mock
-    , 100)
-
-    deferred
+    Deft.promise.Deferred.resolve(
+      text: '100600R3'
+      format: 'SIMULATOR'
+      cancelled: false
+    )
 )
