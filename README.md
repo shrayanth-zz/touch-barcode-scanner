@@ -7,6 +7,55 @@ Sencha Touch / PhoneGap Barcode Scanner
 Sencha Touch package that wraps the [PhoneGap Barcode Scanner plugin](https://build.phonegap.com/plugins/140)
 ( `com.phonegap.plugins.barcodescanner` ).
 
+## Usage
+
+1. Add the Superstruct Sencha Cmd repository
+
+`sencha repo add --address https://superstruct.co/packages --name superstruct`
+
+2. Add the package as a dependency in `app.json`
+
+```js
+"requires": [
+  "superstruct-touch-barcode-scanner@1.0.1?"
+]
+```
+
+3. Add the class `Superstruct.touch.device.BarcodeScanner` to the `requires` of
+   the class that will be initiating the scan
+
+```js
+Ext.define( 'MyApp.service.BarcodeScanner', {
+
+  requires: [
+    'Superstruct.touch.device.BarcodeScanner'
+  ]
+
+});
+```
+
+4. Call the `scan()` method that will return a Deft JS Promise
+
+```js
+Superstruct.touch.device.BarcodeScanner.scan().then( function( result ) {
+  Ext.Msg.alert(
+    'Barcode Scanned',
+    JSON.stringify( result ),
+    Ext.emptyFn
+  )
+} ).otherwise( function( error ) {
+  Ext.Msg.alert(
+    'Error',
+    error,
+    Ext.emptyFn
+  )
+} );
+```
+
+5. Build the app
+
+`sencha app build`
+
 ## Team
 
 * [Isaac Johnston](https://github.com/superstructor)
