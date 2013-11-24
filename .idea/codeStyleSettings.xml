@@ -21,6 +21,9 @@
           <option name="SPACE_WITHIN_RANGE_BRACKETS" value="true" />
           <option name="SPACE_WITHIN_OBJECT_BRACES" value="true" />
         </CoffeeScriptCodeStyleSettings>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
         <codeStyleSettings language="CSS">
           <indentOptions>
             <option name="INDENT_SIZE" value="2" />
